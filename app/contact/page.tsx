@@ -25,7 +25,7 @@ export default function Contact() {
                             <Phone className="h-5 w-5 text-primary mt-1" />
                             <div>
                                 <h3 className="font-semibold">Phone</h3>
-                                <p className="text-muted-foreground">+63 912 345 6789</p>
+                                <p className="text-muted-foreground">+63 991 732 9683</p>
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@ export default function Contact() {
                             <MapPin className="h-5 w-5 text-primary mt-1" />
                             <div>
                                 <h3 className="font-semibold">Location</h3>
-                                <p className="text-muted-foreground">Naga City, Camarines Sur, Philippines</p>
+                                <p className="text-muted-foreground">San Fernando, Camarines Sur, Philippines</p>
                             </div>
                         </div>
                     </CardContent>
