@@ -44,9 +44,8 @@ const hobbies = [
 
 export default function HobbiesPage() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-16 px-4">
+        <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50 py-16 px-4">
             <div className="max-w-6xl mx-auto">
-                {/* Header Section */}
                 <div className="text-center mb-16">
                     <h1 className="text-5xl font-bold text-gray-800 mb-4">
                         My Hobbies & Interests ✨
@@ -57,7 +56,6 @@ export default function HobbiesPage() {
                     <div className="w-24 h-1 bg-blue-500 mx-auto mt-6 rounded-full"></div>
                 </div>
 
-                {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {hobbies.map((hobby) => {
                         const Icon = hobby.icon;
@@ -89,7 +87,6 @@ export default function HobbiesPage() {
                     })}
                 </div>
 
-                {/* Footer Note */}
                 <div className="text-center mt-16">
                     <p className="text-gray-500 italic text-lg">
                         "Enjoying life and finding inspiration everywhere" 🌿
