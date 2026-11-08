@@ -1,69 +1,94 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap } from "lucide-react";
+"use client";
 
-const educationList = [
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import { GraduationCap, BookOpen, School, Award } from "lucide-react";
+
+const education = [
     {
-        degree: "Master in Information Technology",
-        institution: "University of the Philippines",
-        description: "Focused on software engineering, data structures, algorithms, and web development.",
+        icon: School,
+        title: "Elementary School",
+        description: "Completed my elementary education with enthusiasm and curiosity, building the foundation for learning.",
+        color: "from-blue-50 to-blue-100",
+        iconBg: "bg-blue-100",
+        iconColor: "text-blue-600",
     },
     {
-        degree: "BS in Information Technology",
-        institution: "University of Nueva Caceres",
-        description: "Student program covering React, Node.js, databases, and deployment.",
-        achievements: ["Built 3 full-stack applications", "Team Code Reviewer"],
+        icon: BookOpen,
+        title: "High School",
+        description: "Developed strong study habits and discovered my passion for technology and computers.",
+        color: "from-emerald-50 to-emerald-100",
+        iconBg: "bg-emerald-100",
+        iconColor: "text-emerald-600",
     },
     {
-        degree: "High School Diploma",
-        institution: "Pamukid National High School",
-        period: "2024 - 2025",
-        description: "Basic computer programming fundamentals, HTML, CSS, and JavaScript.",
-        achievements: ["Built 3 full-stack applications", "Team Code Reviewer"],
+        icon: GraduationCap,
+        title: "College / Senior High",
+        description: "Currently pursuing my studies, focusing on programming and software development.",
+        color: "from-indigo-50 to-indigo-100",
+        iconBg: "bg-indigo-100",
+        iconColor: "text-indigo-600",
+    },
+    {
+        icon: Award,
+        title: "Skills & Certifications",
+        description: "Learning web development with Next.js, NestJS, and modern tools — growing every day.",
+        color: "from-purple-50 to-purple-100",
+        iconBg: "bg-purple-100",
+        iconColor: "text-purple-600",
     },
 ];
 
-export default function Education() {
+export default function EducationPage() {
     return (
-        <div className="min-h-screen py-16 px-4 max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold mb-4">Education</h1>
-                <p className="text-lg text-muted-foreground">Academic background and formal training.</p>
-            </div>
+        <div className="min-h-screen bg-gradient-to-b from-sky-50 via-blue-50 to-white py-16 px-4">
+            <div className="max-w-6xl mx-auto">
 
-            <div className="space-y-6">
-                {educationList.map((item, index) => (
-                    <Card key={index}>
-                        <CardHeader>
-                            <div className="flex items-start gap-3">
-                                <GraduationCap className="h-5 w-5 text-primary mt-1" />
-                                <div>
-                                    <CardTitle className="text-xl">{item.degree}</CardTitle>
-                                    <CardDescription className="text-base mt-1">
-                                        {item.institution}
-                                    </CardDescription>
-                                </div>
-                            </div>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-muted-foreground mb-3">{item.description}</p>
-                            {item.period && (
-                                <p className="text-sm font-medium text-foreground/70 mb-2">
-                                    {item.period}
-                                </p>
-                            )}
-                            {item.achievements && (
-                                <div className="space-y-1">
-                                    <p className="text-sm font-semibold">Key Highlights</p>
-                                    <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                                        {item.achievements.map((achievement, i) => (
-                                            <li key={i}>{achievement}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                        </CardContent>
-                    </Card>
-                ))}
+                {/* Header Section */}
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl font-bold text-slate-800 mb-4">
+                        My Education & Journey
+                    </h1>
+                    <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+                        Where I learned, grew, and discovered my passion for technology
+                    </p>
+                    <div className="w-24 h-1 bg-blue-500 mx-auto mt-6 rounded-full"></div>
+                </div>
+
+                {/* Cards Grid — Same as Hobbies */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {education.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                            <Card
+                                key={item.title}
+                                className={`border-0 shadow-md bg-gradient-to-br ${item.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-2xl overflow-hidden`}
+                            >
+                                <CardHeader className="pb-2">
+                                    <div className="flex items-center gap-4">
+                                        <div className={`${item.iconBg} p-3 rounded-xl`}>
+                                            <Icon className={`h-7 w-7 ${item.iconColor}`} />
+                                        </div>
+                                        <CardTitle className="text-2xl font-bold text-slate-800">
+                                            {item.title}
+                                        </CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-slate-600 text-lg leading-relaxed mt-2">
+                                        {item.description}
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        );
+                    })}
+                </div>
+
+                {/* Footer Note */}
+                <div className="text-center mt-16">
+                    <p className="text-slate-500 italic text-lg">
+                        "Education is the foundation, curiosity is the guide"
+                    </p>
+                </div>
             </div>
         </div>
     );
