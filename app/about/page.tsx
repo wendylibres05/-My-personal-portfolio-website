@@ -10,7 +10,7 @@ export default function HomePage() {
                 {/* Hero Section */}
                 <div className="text-center mb-20">
                     <div className="inline-block mb-6">
-                        <span className="text-7xl">👋</span>
+                        <span className="text-7xl"> </span>
                     </div>
 
                     <h1 className="text-6xl font-bold text-gray-800 mb-6">
