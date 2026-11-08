@@ -4,16 +4,16 @@ import Link from "next/link";
 
 export default function HomePage() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50 py-24 px-4">
+        <div className="min-h-screen bg-gradient-to-b from-sky-50 via-blue-50 to-white py-20 px-4">
             <div className="max-w-4xl mx-auto">
 
                 {/* Hero Section */}
-                <div className="text-center mb-20">
-                    <h1 className="text-5xl font-bold text-slate-800 mb-8 tracking-tight">
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl font-bold text-slate-800 mb-8">
                         Hi, I'm Wendy
                     </h1>
 
-                    {/* Introduction */}
+                    {/* About Section — Combined Here */}
                     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-10 mb-10">
                         <p className="text-xl text-slate-700 leading-relaxed mb-4">
                             I am a student and aspiring developer based in the Philippines.
@@ -31,10 +31,10 @@ export default function HomePage() {
                     {/* Navigation Links */}
                     <div className="flex flex-wrap justify-center gap-5 mb-16">
                         <Link
-                            href="/about"
+                            href="/education"
                             className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg transition-all duration-300"
                         >
-                            About Me
+                            Education
                         </Link>
                         <Link
                             href="/hobbies"
