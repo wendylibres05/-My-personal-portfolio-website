@@ -13,33 +13,30 @@ const navItems = [
     { name: "Contact", href: "/contact" },
 ];
 
-export function Navbar() {
+export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
             <div className="container flex h-16 items-center justify-between px-4 mx-auto">
                 <Link href="/" className="flex items-center gap-2 font-bold text-xl">
                     <Code2 className="h-6 w-6 text-primary" />
-                    <span>DevPortfolio</span>
+                    <span>My Portfolio</span>
                 </Link>
 
                 <nav className="flex items-center gap-1 sm:gap-2">
-                    {navItems.map((item) => {
-                        const isActive = pathname === item.href;
-                        return (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={buttonVariants({
-                                    variant: isActive ? "default" : "ghost",
-                                    size: "sm",
-                                })}
-                            >
-                                {item.name}
-                            </Link>
-                        );
-                    })}
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className={buttonVariants({
+                                variant: pathname === item.href ? "default" : "ghost",
+                                size: "sm",
+                            })}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
                 </nav>
             </div>
         </header>
