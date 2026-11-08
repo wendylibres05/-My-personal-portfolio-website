@@ -16,7 +16,7 @@ export default function HomePage() {
                     {/* Introduction Card */}
                     <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-10 mb-10">
                         <p className="text-xl text-blue-800 leading-relaxed mb-4">
-                            I am a student and aspiring developer based in the Philippines.
+                            I am a type of college student studying the BSIS "Bachelor Science if Information System".
                         </p>
                         <p className="text-lg text-blue-700 leading-relaxed mb-4">
                             I have a passion for building beautiful, functional websites and discovering new technologies. I am currently working with Next.js and NestJS, expanding my skills with every project.
