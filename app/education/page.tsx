@@ -15,8 +15,8 @@ const educationList = [
     },
     {
         degree: "High School Diploma",
-        institution: "Ateneo de Naga University",
-        period: "2018 - 2024",
+        institution: "Pamukid National High School",
+        period: "2024 - 2025",
         description: "Basic computer programming fundamentals, HTML, CSS, and JavaScript.",
         achievements: ["Built 3 full-stack applications", "Team Code Reviewer"],
     },
