@@ -35,7 +35,7 @@ export default function AboutPage() {
 
             <div className="max-w-2xl space-y-6 mb-10">
                 <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
-                    Hi! I'm <strong>Wendy Libres</strong>, an Information Systems student from Camarines Sur, Philippines. I love exploring technology and learning how things work behind the screen.
+                    Hi! I'm <strong>Wendy Libres</strong>, an Information Systems student from Pamukid, San Fernando Camarines Sur, Philippines. I love exploring technology and learning how things work behind the screen.
                 </p>
                 <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
                     My journey in tech started with curiosity and a simple desire to create. Every day, I'm learning something new — whether it's writing code, designing websites, or understanding how computers think.
@@ -44,7 +44,6 @@ export default function AboutPage() {
                     This portfolio is my little corner on the internet where I share who I am, what I'm learning, and what I love doing. Thank you for visiting!
                 </p>
             </div>
-
             {/* Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
