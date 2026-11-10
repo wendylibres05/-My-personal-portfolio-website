@@ -1,97 +1,83 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import { Card, CardContent } from "../../components/ui/card";
 import { Film, Utensils, Waves, BookOpen } from "lucide-react";
 
 const hobbies = [
     {
         icon: Film,
         title: "Watching Movies",
-        description: "I love watching movies — it's my favorite way to relax and enjoy wonderful stories.",
-        emoji: "🎬",
-        color: "from-blue-50 to-blue-100",
-        iconBg: "bg-blue-100",
-        iconColor: "text-blue-600",
+        description: "I love watching movies specially anime or horror movies it makes me feel more relax",
     },
     {
         icon: Utensils,
         title: "Eating Good Food",
-        description: "Trying delicious food and enjoying tasty meals brings me so much joy.",
-        emoji: "🍽️",
-        color: "from-orange-50 to-orange-100",
-        iconBg: "bg-orange-100",
-        iconColor: "text-orange-600",
+        description: "Trying delicious food and enjoying tasty meals that bring me so much comfort.",
     },
     {
         icon: Waves,
         title: "Going to the Beach",
-        description: "I love the beach — walking by the shore, feeling the breeze, and watching the waves.",
-        emoji: "🏖️",
-        color: "from-cyan-50 to-cyan-100",
-        iconBg: "bg-cyan-100",
-        iconColor: "text-cyan-600",
+        description: "I love the beach walking by the shore, feeling the breeze, and watching the waves.",
     },
     {
         icon: BookOpen,
         title: "Reading",
         description: "Reading books helps me learn new things and explore amazing worlds.",
-        emoji: "📖",
-        color: "from-purple-50 to-purple-100",
-        iconBg: "bg-purple-100",
-        iconColor: "text-purple-600",
     },
 ];
 
 export default function HobbiesPage() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50 py-16 px-4">
-            <div className="max-w-6xl mx-auto">
+        <div className="min-h-screen bg-white py-20 px-4">
+            <div className="max-w-3xl mx-auto">
+
+                {/* Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold text-gray-800 mb-4">
-                        My Hobbies & Interests ✨
+                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-yellow-100 text-yellow-700 text-sm font-medium mb-6">
+                        Things I Love
+                    </div>
+                    <h1 className="text-5xl font-bold text-slate-800 mb-4">
+                        My <span className="text-yellow-500">Hobbies & Interests</span>
                     </h1>
-                    <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-                        A few things I truly love doing outside of coding 💛
+                    <p className="text-lg text-slate-500 max-w-xl mx-auto">
+                        A few things I truly love doing outside of coding
                     </p>
-                    <div className="w-24 h-1 bg-blue-500 mx-auto mt-6 rounded-full"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Hobbies Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {hobbies.map((hobby) => {
                         const Icon = hobby.icon;
                         return (
                             <Card
                                 key={hobby.title}
-                                className={`border-0 shadow-lg bg-gradient-to-br ${hobby.color} hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-2xl overflow-hidden`}
+                                className="border-0 shadow-md bg-gradient-to-br from-yellow-50 to-amber-50 rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                             >
-                                <CardHeader className="pb-2">
-                                    <div className="flex items-center gap-4">
-                                        <div className={`${hobby.iconBg} p-3 rounded-xl`}>
-                                            <Icon className={`h-7 w-7 ${hobby.iconColor}`} />
+                                <CardContent className="p-8 text-center">
+                                    <div className="flex flex-col items-center gap-4">
+                                        <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center">
+                                            <Icon className="h-8 w-8 text-yellow-600" />
                                         </div>
                                         <div>
-                                            <span className="text-3xl">{hobby.emoji}</span>
-                                            <CardTitle className="text-2xl font-bold text-gray-800 mt-1">
+                                            <h3 className="text-xl font-bold text-slate-800 mt-2 mb-3">
                                                 {hobby.title}
-                                            </CardTitle>
+                                            </h3>
+                                            <p className="text-slate-600 text-lg leading-relaxed">
+                                                {hobby.description}
+                                            </p>
                                         </div>
                                     </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 text-lg leading-relaxed mt-2">
-                                        {hobby.description}
-                                    </p>
                                 </CardContent>
                             </Card>
                         );
                     })}
                 </div>
 
-                <div className="text-center mt-16">
-                    <p className="text-gray-500 italic text-lg">
-                        "Enjoying life and finding inspiration everywhere" 🌿
-                    </p>
-                </div>
+                {/* Footer Quote */}
+                <p className="mt-16 text-slate-400 italic text-lg text-center">
+                    "Enjoying life and finding inspiration everywhere"
+                </p>
+
             </div>
         </div>
     );
