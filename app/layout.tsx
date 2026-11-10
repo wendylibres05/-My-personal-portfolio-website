@@ -1,28 +1,36 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/navbar";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Personal Portfolio",
-  description: "Built with Next.js & Shadcn UI",
+    title: "Wendy Libres | My Portfolio",
+    description: "My personal portfolio website",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={`${inter.className} min-h-screen bg-background text-foreground`}>
-        <Navbar />
-        <main className="container mx-auto px-4 py-8 max-w-5xl">
-          {children}
-        </main>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className="relative min-h-screen">
+                {/* Background Image — applies to ALL pages */}
+                <div
+                    className="fixed inset-0 -z-10"
+                    style={{
+                        backgroundImage: "url('/bg-pattern.jpg')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundAttachment: "fixed",
+                    }}
+                >
+                    {/* Soft overlay so text is easy to read */}
+                    <div className="absolute inset-0 bg-white/85"></div>
+                </div>
+
+                {children}
+            </body>
+        </html>
+    );
 }
