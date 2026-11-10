@@ -29,7 +29,7 @@ export default function RootLayout({
                     <div className="absolute inset-0 bg-white/85"></div>
                 </div>
 
-                {/* Navigation Bar — links to all your pages */}
+                {/* Navigation Bar */}
                 <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-yellow-100">
                     <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
                         <Link href="/" className="font-bold text-xl text-yellow-600">My Portfolio</Link>
@@ -43,7 +43,7 @@ export default function RootLayout({
                     </div>
                 </nav>
 
-                {/* Page Content — your about/education/hobbies/contact pages go here */}
+                {/* Page Content */}
                 <main>{children}</main>
             </body>
         </html>
