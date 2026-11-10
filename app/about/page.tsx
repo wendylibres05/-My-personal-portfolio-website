@@ -1,70 +1,58 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, Sparkles } from "lucide-react";
 
-export default function HomePage() {
+export default function Home() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 to-white py-24 px-4">
-            <div className="max-w-4xl mx-auto">
+        <div className="flex flex-col items-center justify-center min-h-[75vh] text-center px-4 py-8">
 
-                {/* Hero Section */}
-                <div className="text-center mb-20">
-                    <h1 className="text-5xl font-bold text-blue-900 mb-8 tracking-tight">
-                        Hi, I'm Wendy
-                    </h1>
-
-                    {/* Introduction Card */}
-                    <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-10 mb-10">
-                        <p className="text-xl text-blue-800 leading-relaxed mb-4">
-                            I am a type of college student studying the BSIS "Bachelor Science if Information System".
-                        </p>
-                        <p className="text-lg text-blue-700 leading-relaxed mb-4">
-                            I have a passion for building beautiful, functional websites and discovering new technologies. I am currently working with Next.js and NestJS, expanding my skills with every project.
-                        </p>
-                        <p className="text-lg text-blue-700 leading-relaxed">
-                            Outside of coding, I enjoy watching films, discovering good food, spending time by the sea, and getting lost in a good book.
-                        </p>
-                    </div>
-
-                    <div className="w-16 h-0.5 bg-blue-500 mx-auto mb-10"></div>
-
-                    {/* Navigation Buttons — All Blue Theme */}
-                    <div className="flex flex-wrap justify-center gap-5 mb-16">
-                        <Link
-                            href="/education"
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg transition-all duration-300"
-                        >
-                            Education
-                        </Link>
-                        <Link
-                            href="/hobbies"
-                            className="bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium px-8 py-3 rounded-lg border border-blue-200 transition-all duration-300"
-                        >
-                            Hobbies & Interests
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className="bg-blue-800 hover:bg-blue-900 text-white font-medium px-8 py-3 rounded-lg transition-all duration-300"
-                        >
-                            Contact
-                        </Link>
-                    </div>
+            {/* Profile Picture Container */}
+            <div className="relative mb-6">
+                <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-pink-200 shadow-md ring-4 ring-pink-100">
+                    <Image
+                        src="/profile.jpg"
+                        alt="Wendy Libres"
+                        width={176}
+                        height={176}
+                        className="object-cover w-full h-full"
+                        priority
+                    />
                 </div>
-
-                {/* Projects Section */}
-                <div className="bg-white rounded-2xl shadow-sm border border-blue-100 p-10 text-center">
-                    <h2 className="text-2xl font-semibold text-blue-900 mb-4">My Projects</h2>
-                    <p className="text-blue-600 mb-6">This portfolio marks the beginning of my journey. New projects will be shared here as I grow.</p>
-                    <p className="text-blue-500 font-medium">Coming soon</p>
-                </div>
-
-                {/* Footer */}
-                <div className="text-center mt-16 text-blue-500">
-                    <p>Created by Wendy</p>
-                    <p className="mt-1 text-sm">Learning, growing, and building every day</p>
-                </div>
-
             </div>
+
+            {/* Decorative Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 border border-pink-200 text-pink-800 text-sm font-medium mb-6 shadow-sm">
+                <Sparkles className="h-4 w-4 text-pink-600" />
+                <span> Huānyíng lái dào wǒ de shùwè zuòpǐn jí</span>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight max-w-3xl mb-4">
+                wǒ shì <span className="text-pink-600">Wendy Libres</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mb-8 leading-relaxed">
+                An Information Systems student passionate about building functional and creative web applications using modern technologies.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-4">
+                <Link
+                    href="/about"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600 text-white font-medium shadow-sm hover:bg-pink-700 transition-colors"
+                >
+                    <span>Learn More About Me</span>
+                    <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-100 text-purple-900 border border-purple-200 font-medium hover:bg-purple-200/60 transition-colors"
+                >
+                    Get in Touch
+                </Link>
+            </div>
+
         </div>
     );
 }
