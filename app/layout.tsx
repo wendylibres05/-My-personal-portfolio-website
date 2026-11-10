@@ -35,7 +35,6 @@ export default function RootLayout({
                         <Link href="/" className="font-bold text-xl text-yellow-600">My Portfolio</Link>
                         <div className="flex items-center gap-8">
                             <Link href="/" className="text-slate-700 hover:text-yellow-600 transition-colors">Home</Link>
-                            <Link href="/about" className="text-slate-700 hover:text-yellow-600 transition-colors">About</Link>
                             <Link href="/education" className="text-slate-700 hover:text-yellow-600 transition-colors">Education</Link>
                             <Link href="/hobbies" className="text-slate-700 hover:text-yellow-600 transition-colors">Hobbies</Link>
                             <Link href="/contact" className="text-slate-700 hover:text-yellow-600 transition-colors">Contact</Link>
