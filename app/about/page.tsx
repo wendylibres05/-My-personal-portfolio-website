@@ -8,7 +8,7 @@ export default function Home() {
 
             {/* Profile Picture Container */}
             <div className="relative mb-6">
-                <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-pink-200 shadow-md ring-4 ring-pink-100">
+                <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-yellow-200 shadow-md ring-4 ring-yellow-100">
                     <Image
                         src="/profile.jpg"
                         alt="Wendy Libres"
@@ -21,14 +21,14 @@ export default function Home() {
             </div>
 
             {/* Decorative Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 border border-pink-200 text-pink-800 text-sm font-medium mb-6 shadow-sm">
-                <Sparkles className="h-4 w-4 text-pink-600" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-800 text-sm font-medium mb-6 shadow-sm">
+                <Sparkles className="h-4 w-4 text-yellow-500" />
                 <span> Huānyíng lái dào wǒ de shùwè zuòpǐn jí</span>
             </div>
 
             {/* Main Title */}
             <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight max-w-3xl mb-4">
-                wǒ shì <span className="text-pink-600">Wendy Libres</span>
+                wǒ shì <span className="text-yellow-500">Wendy Libres</span>
             </h1>
 
             {/* Subtitle */}
@@ -40,14 +40,14 @@ export default function Home() {
             <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
                     href="/about"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pink-600 text-white font-medium shadow-sm hover:bg-pink-700 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-yellow-400 text-slate-900 font-medium shadow-sm hover:bg-yellow-500 transition-colors"
                 >
                     <span>Learn More About Me</span>
                     <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-100 text-purple-900 border border-purple-200 font-medium hover:bg-purple-200/60 transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-100 text-amber-900 border border-amber-200 font-medium hover:bg-amber-200/60 transition-colors"
                 >
                     Get in Touch
                 </Link>
