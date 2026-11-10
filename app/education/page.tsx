@@ -37,7 +37,7 @@ export default function EducationPage() {
                                     Graduate • 2024 – 2025
                                 </p>
                                 <p className="text-slate-600 text-lg leading-relaxed max-w-md mx-auto">
-                                    Graduated from Pamukid National High School with enthusiasm and curiosity. Taking the **ICT strand** helped me develop strong study habits and deepen my passion for computers, programming, and technology — shaping my path toward building digital solutions.
+                                    Graduated from Pamukid National High School with enthusiasm and curiosity. Taking the GAS strand it helped me develop strong study habits and to feed my curiosity about studying coding that it lead to deepen my passion for computers, programming, and technology. Shaping my path toward building digital solutions.
                                 </p>
                             </div>
                         </div>
