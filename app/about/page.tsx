@@ -5,8 +5,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center min-h-[75vh] text-center px-4 py-8">
-
-            {/* Profile Picture Container */}
+            {/* Profile Picture */}
             <div className="relative mb-6">
                 <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-yellow-200 shadow-md ring-4 ring-yellow-100">
                     <Image
@@ -20,15 +19,15 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Decorative Badge */}
+            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-800 text-sm font-medium mb-6 shadow-sm">
                 <Sparkles className="h-4 w-4 text-yellow-500" />
-                <span> Huānyíng lái dào wǒ de shùwè zuòpǐn jí</span>
+                <span>Welcome to my portfolio</span>
             </div>
 
-            {/* Main Title */}
+            {/* Title */}
             <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight max-w-3xl mb-4">
-                wǒ shì <span className="text-yellow-500">Wendy Libres</span>
+                I'm <span className="text-yellow-500">Wendy Libres</span>
             </h1>
 
             {/* Subtitle */}
@@ -36,7 +35,7 @@ export default function Home() {
                 An Information Systems student passionate about building functional and creative web applications using modern technologies.
             </p>
 
-            {/* Action Buttons */}
+            {/* Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
                     href="/about"
@@ -52,7 +51,6 @@ export default function Home() {
                     Get in Touch
                 </Link>
             </div>
-
         </div>
     );
 }
