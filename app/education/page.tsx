@@ -11,14 +11,14 @@ export default function EducationPage() {
                 {/* Header */}
                 <div className="mb-16">
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-yellow-100 text-yellow-700 text-sm font-medium mb-6">
-                        <span></span>
+                        <span>📚</span>
                         <span>My Studies</span>
                     </div>
                     <h1 className="text-5xl font-bold text-slate-800 mb-4">
                         My <span className="text-yellow-500">Education</span>
                     </h1>
                     <p className="text-lg text-slate-500 max-w-xl mx-auto">
-                        Where I learned, grew my curiosity, and discovered my love passion for technology
+                        Where I learned, grew, and discovered my passion for technology
                     </p>
                 </div>
 
@@ -30,11 +30,14 @@ export default function EducationPage() {
                                 <BookOpen className="h-10 w-10 text-yellow-600" />
                             </div>
                             <div>
-                                <h2 className="text-2xl font-bold text-slate-800 mb-3">
-                                    High School Graduate "General Academic Strand"
+                                <h2 className="text-2xl font-bold text-slate-800 mb-2">
+                                    Pamukid National High School
                                 </h2>
+                                <p className="text-yellow-600 font-medium mb-4">
+                                    Graduate • 2024 – 2025
+                                </p>
                                 <p className="text-slate-600 text-lg leading-relaxed max-w-md mx-auto">
-                                    Completed my high school education with enthusiasm and curiosity. It was there I developed strong study habits and first discovered my passion for computers and technology.
+                                    Graduated from Pamukid National High School with enthusiasm and curiosity. Taking the **ICT strand** helped me develop strong study habits and deepen my passion for computers, programming, and technology — shaping my path toward building digital solutions.
                                 </p>
                             </div>
                         </div>
