@@ -1,72 +1,60 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function AboutPage() {
     return (
-        <div className="min-h-[85vh] px-4 py-12">
-            <div className="max-w-5xl mx-auto">
-
-                {/* Badge & Heading — centered at top */}
+        <div className="min-h-screen py-16 px-4">
+            <div className="max-w-6xl mx-auto">
+                {/* Section Header */}
                 <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-800 text-sm font-medium mb-4 shadow-sm">
-                        <Sparkles className="h-4 w-4 text-yellow-500" />
-                        <span>Get to know me</span>
-                    </div>
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900">
+                    <span className="inline-block px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 text-sm font-medium mb-4">
+                        Get to know me
+                    </span>
+                    <h1 className="text-4xl font-bold text-slate-800">
                         About <span className="text-yellow-500">Me</span>
                     </h1>
                 </div>
 
-                {/* Two Column Layout — Image Left, Text Right */}
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-
-                    {/* Profile Picture — Left */}
-                    <div className="flex justify-center md:justify-start">
-                        <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-yellow-200 shadow-lg ring-4 ring-yellow-100">
-                            <Image
-                                src="/profile.jpg"
-                                alt="Wendy Libres"
-                                width={320}
-                                height={320}
-                                className="object-cover w-full h-full"
-                                priority
+                {/* Content Container */}
+                <div className="flex flex-col md:flex-row items-center gap-12">
+                    {/* Profile Image */}
+                    <div className="flex-shrink-0">
+                        <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-yellow-200 shadow-lg">
+                            <img
+                                src="https://via.placeholder.com/256/FFF8E1/333333?text=Profile"
+                                alt="Wendy Libres Profile"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     </div>
 
-                    {/* Introduction — Right */}
-                    <div className="text-left space-y-6">
-                        <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
-                            Hi! I'm <strong>Wendy Libres</strong>, an Information Systems student from Pamukid, San Fernando, Camarines Sur, Philippines. I love exploring technology and learning how things work behind the screen.
+                    {/* ✅ Pastel Yellow Box — All Text Inside */}
+                    <div className="bg-yellow-50/80 rounded-2xl p-8 shadow-sm border border-yellow-100">
+                        <p className="text-slate-700 leading-relaxed mb-4">
+                            Hi! I'm <strong className="text-yellow-600">Wendy Libres</strong>, an Information Systems student from Pamukid, San Fernando, Camarines Sur, Philippines. I love exploring technology and learning how things work behind the screen.
                         </p>
-                        <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
+                        <p className="text-slate-700 leading-relaxed mb-4">
                             My journey in tech started with curiosity and a simple desire to create. Every day, I'm learning something new — whether it's writing code, designing websites, or understanding how computers think.
                         </p>
-                        <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
+                        <p className="text-slate-700 leading-relaxed">
                             This portfolio is my little corner on the internet where I share who I am, what I'm learning, and what I love doing. Thank you for visiting!
                         </p>
-
-                        {/* Buttons */}
-                        <div className="flex flex-wrap gap-4 pt-4">
-                            <Link
-                                href="/education"
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-yellow-400 text-slate-900 font-medium shadow-sm hover:bg-yellow-500 transition-colors"
-                            >
-                                <span>My Education</span>
-                                <ArrowRight className="h-4 w-4" />
-                            </Link>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-100 text-amber-900 border border-amber-200 font-medium hover:bg-amber-200/60 transition-colors"
-                            >
-                                Get in Touch
-                            </Link>
-                        </div>
                     </div>
+                </div>
 
+                {/* Navigation Buttons */}
+                <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
+                    <Link
+                        href="/education"
+                        className="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-white font-medium rounded-full transition-colors shadow-sm"
+                    >
+                        My Education →
+                    </Link>
+                    <Link
+                        href="/contact"
+                        className="px-8 py-3 bg-yellow-100 hover:bg-yellow-200 text-yellow-700 font-medium rounded-full transition-colors"
+                    >
+                        Get in Touch
+                    </Link>
                 </div>
             </div>
         </div>
