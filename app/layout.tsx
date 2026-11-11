@@ -15,35 +15,35 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="relative min-h-screen">
-                {/* ✅ Background — shows on ALL pages automatically */}
+                {/* ✅ Pastel Green Gradient Background — shows on ALL pages automatically */}
                 <div
                     className="fixed inset-0 -z-10"
                     style={{
-                        backgroundImage: "url('/background.jpg')",
+                        background: "linear-gradient(120deg, #f0fdf4, #dcfce7, #e6fffa)",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundAttachment: "fixed",
                     }}
                 >
                     {/* Soft white overlay — keeps text readable */}
-                    <div className="absolute inset-0 bg-white/85"></div>
+                    <div className="absolute inset-0 bg-white/60"></div>
                 </div>
 
                 {/* ✅ Navigation — consistent across all pages */}
-                <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-yellow-100">
+                <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-green-100">
                     <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-                        <Link href="/" className="font-bold text-xl text-yellow-600">My Portfolio</Link>
+                        <Link href="/" className="font-bold text-xl text-green-600">My Portfolio</Link>
                         <div className="flex items-center gap-8">
-                            <Link href="/" className="text-slate-700 hover:text-yellow-600 transition-colors">Home</Link>
-                            <Link href="/about" className="text-slate-700 hover:text-yellow-600 transition-colors">About</Link>
-                            <Link href="/education" className="text-slate-700 hover:text-yellow-600 transition-colors">Education</Link>
-                            <Link href="/hobbies" className="text-slate-700 hover:text-yellow-600 transition-colors">Hobbies</Link>
-                            <Link href="/contact" className="text-slate-700 hover:text-yellow-600 transition-colors">Contact</Link>
+                            <Link href="/" className="text-slate-700 hover:text-green-600 transition-colors">Home</Link>
+                            <Link href="/about" className="text-slate-700 hover:text-green-600 transition-colors">About</Link>
+                            <Link href="/education" className="text-slate-700 hover:text-green-600 transition-colors">Education</Link>
+                            <Link href="/hobbies" className="text-slate-700 hover:text-green-600 transition-colors">Hobbies</Link>
+                            <Link href="/contact" className="text-slate-700 hover:text-green-600 transition-colors">Contact</Link>
                         </div>
                     </div>
                 </nav>
 
-                {/* ✅ Your page content — About / Education / Hobbies / Contact all go here */}
+                {/* ✅ Page content — wraps About / Education / Hobbies / Contact automatically */}
                 <main>{children}</main>
             </body>
         </html>
