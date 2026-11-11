@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
     return (
@@ -16,18 +17,20 @@ export default function AboutPage() {
 
                 {/* Content Container */}
                 <div className="flex flex-col md:flex-row items-center gap-12">
-                    {/* Profile Image */}
+                    {/* Profile Image — using your local file */}
                     <div className="flex-shrink-0">
                         <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-yellow-200 shadow-lg">
-                            <img
-                                src="https://via.placeholder.com/256/FFF8E1/333333?text=Profile"
+                            <Image
+                                src="/profile.jpg"
                                 alt="Wendy Libres Profile"
+                                width={256}
+                                height={256}
                                 className="w-full h-full object-cover"
                             />
                         </div>
                     </div>
 
-                    {/* ✅ Pastel Yellow Box — All Text Inside */}
+                    {/* Pastel Yellow Box — All Text Inside */}
                     <div className="bg-yellow-50/80 rounded-2xl p-8 shadow-sm border border-yellow-100">
                         <p className="text-slate-700 leading-relaxed mb-4">
                             Hi! I'm <strong className="text-yellow-600">Wendy Libres</strong>, an Information Systems student from Pamukid, San Fernando, Camarines Sur, Philippines. I love exploring technology and learning how things work behind the screen.
