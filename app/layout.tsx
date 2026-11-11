@@ -15,7 +15,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="relative min-h-screen">
-                {/* Background Image — applies to ALL pages */}
+                {/* ✅ Background — shows on ALL pages automatically */}
                 <div
                     className="fixed inset-0 -z-10"
                     style={{
@@ -25,11 +25,11 @@ export default function RootLayout({
                         backgroundAttachment: "fixed",
                     }}
                 >
-                    {/* Soft overlay so text is easy to read */}
+                    {/* Soft white overlay — keeps text readable */}
                     <div className="absolute inset-0 bg-white/85"></div>
                 </div>
 
-                {/* Navigation Bar */}
+                {/* ✅ Navigation — consistent across all pages */}
                 <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-yellow-100">
                     <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
                         <Link href="/" className="font-bold text-xl text-yellow-600">My Portfolio</Link>
@@ -43,7 +43,7 @@ export default function RootLayout({
                     </div>
                 </nav>
 
-                {/* Page Content */}
+                {/* ✅ Your page content — About / Education / Hobbies / Contact all go here */}
                 <main>{children}</main>
             </body>
         </html>
