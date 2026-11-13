@@ -41,13 +41,27 @@ export default function Home() {
             </div>
           </div>
 
-          <Link
-            href="/accounts"
-            className="inline-flex items-center gap-2 px-5 py-3 bg-green-600 hover:bg-green-700 text-white font-medium text-sm rounded-xl shadow-sm transition shrink-0"
-          >
-            Manage Accounts
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+            <Link
+              href="/register"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-green-600 hover:bg-green-700 text-white font-semibold text-xs rounded-xl shadow-xs transition"
+            >
+              Register Account
+            </Link>
+            <Link
+              href="/login"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-semibold text-xs rounded-xl shadow-xs transition"
+            >
+              Sign In
+            </Link>
+            <Link
+              href="/accounts"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium text-xs rounded-xl transition"
+            >
+              View Directory
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         {/* Feature Pills */}

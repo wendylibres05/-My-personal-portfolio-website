@@ -12,6 +12,8 @@ const navItems = [
     { name: "Hobbies", href: "/hobbies" },
     { name: "Contact", href: "/contact" },
     { name: "Accounts", href: "/accounts" },
+    { name: "Sign In", href: "/login" },
+    { name: "Register", href: "/register" },
 ];
 
 export default function Navbar() {

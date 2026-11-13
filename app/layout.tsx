@@ -38,7 +38,9 @@ export default function RootLayout({
                             <Link href="/education" className="text-slate-700 hover:text-green-600 transition-colors">Education</Link>
                             <Link href="/hobbies" className="text-slate-700 hover:text-green-600 transition-colors">Hobbies</Link>
                             <Link href="/contact" className="text-slate-700 hover:text-green-600 transition-colors">Contact</Link>
-                            <Link href="/accounts" className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium text-sm transition-colors shadow-xs">Accounts</Link>
+                            <Link href="/accounts" className="text-slate-700 hover:text-green-600 transition-colors">Accounts</Link>
+                            <Link href="/login" className="px-3 py-1 text-slate-700 hover:text-green-600 font-medium text-sm transition-colors">Sign In</Link>
+                            <Link href="/register" className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium text-sm transition-colors shadow-xs">Register</Link>
                         </div>
                     </div>
                 </nav>
